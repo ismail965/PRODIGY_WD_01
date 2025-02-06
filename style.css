@@ -1,0 +1,240 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none; 
+}
+body{
+    /* overflow: hidden; */
+    color: aliceblue;
+    animation: fadeIn 1s ease-in-out;
+    background-color: #252525;
+    background-attachment: fixed;
+}
+header{
+    width: 85%;
+    height: 100vh;
+    background-color: transparent;
+    animation: fadeIn 1s ease-in-out;
+    
+}
+/* .star{
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background-color: #fff;
+    animation: twinkle 2s infinite;
+    box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.5);
+}
+@keyframes twinkle{
+    0%{
+        opacity: 0.5;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0.5;
+    }
+} */
+.navbar{
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    animation: rotateIn 1s ease-in-out;
+}
+.navbar label{
+    font-size: 75px;
+    width: 500px;
+    animation: rotateIn 1s ease-in-out;
+    margin-right: 100px;
+}
+.navbar .center-nav a, .social a{
+    color: aliceblue;
+    margin-left: 15px;
+    font-size: 1.3rem;
+    transition: all 0.5s ease;
+    animation: fadeInUp 1s ease-in-out;
+    align-items: center;
+}
+.navbar .center-nav a:first-child{
+    color: rgb(255, 140, 0);
+}
+.navbar .center-nav a:hover, .social a:hover{
+    color: rgb(255, 140, 0);
+    text-shadow: 0px 0px 30px rgb(255, 140, 0); 
+}
+.navbar .center-nav a{
+    position: relative;
+    text-decoration: none;
+    right: 250px;
+}
+.navbar .center-nav a::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: rgb(255, 140, 0);
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out;
+}
+.navbar .center-nav a:hover::before{
+    visibility: visible;
+    transform: scale(1);
+}
+.text{
+    position: relative;
+    top: 10rem;
+    left: 11rem;
+    letter-spacing: 1px;
+    animation: fadeInUp 1s ease-in-out;
+}
+.text h1{
+    font-weight: bold;
+    font-size: 4rem;
+    font-family: sans-serif;
+    margin-bottom: 10px;
+    animation: fadeInUp 1s ease-in-out;
+}
+.btn{
+    color: aliceblue;
+    border: 2px solid;
+    position: relative;
+    top: 3rem;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    border-radius: 6px;
+    transition: all 0.5s ease;
+    margin-right: 10px;
+    animation: fadeInUp 1s ease-in-out 0.5s backwards;
+}
+.text .btn:hover {
+    background-color: rgb(255, 140, 0);
+    box-shadow: 0 0 10px 2px rgb(255, 140, 0);
+}
+.text p{
+    width: 46%;
+    animation: fadeInUp 1s ease-in-out 1s backwards;
+}
+.pizza{
+    position: relative;
+    top: 40%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    width: 90%;
+    padding: 20px;
+    animation: slideInFromBottom 1s ease-in-out 1,5s backwards;
+}
+.pizza img {
+    width: 100px;
+    height: 100px;
+    margin-left: 20px;
+    object-fit: cover;
+    border: 2px solid rgb(255, 140, 0);
+    transition: transform 0.3s ease;
+    animation: fadeInUp 1s ease-in-out 2s backwards;
+}
+.pizza img:hover{
+    transform: scale(1.1);
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.8);
+}
+.pizza-toggle img{
+    position: absolute;
+    /* width: 38%;
+    height: 74%; */
+    right: 47px;
+    top: 7rem;
+    filter: drop-shadow(63px 90px 392px white);
+    animation: fadeInUp 1s ease-in-out 2.5s backwards;
+    margin-top: 90px;
+}
+.pizza, 
+.pizza-toggle{
+    display: flex;
+}
+.pizza-toggle img{
+    display: none;
+}
+.pizza-toggle img.active {
+    display: block;
+}
+@keyframes fadeIn{
+    from{
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to{
+        opacity: 1;
+    }
+}
+@keyframes fadeInUp{
+    from{
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes slideInFromTop{
+    from{
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes slideInFromBottom{
+    from{
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes rotateIn{
+    from{
+        transform: rotate3d(0,0,1,-20deg);
+        opacity: 0;
+    }
+    to{
+        transform: none;
+        opacity: 1;
+    }
+}
+@media only screen and (max-width: 600px){
+    .label{
+        margin-left: 50px;
+    }
+    .center-nav{
+        display: flex;
+        align-items: center;
+        margin-left: 160px;
+        width: 50px;
+    }
+    .social{
+        display: flex;
+        align-items: center;
+        left: 200px;
+    }
+    .text{
+    position: relative;
+    top: 10rem;
+    left: 36px;
+    letter-spacing: 1px;
+    animation: fadeInUp 1s ease-in-out;
+    }
+    .pizza-toggle img{
+        left: 300px;
+    }
+}
